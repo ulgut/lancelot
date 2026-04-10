@@ -1,0 +1,25 @@
+[package]
+name = "lancelot"
+version = "0.1.0"
+edition = "2024"
+
+[[bin]]
+name = "lancelot"
+path = "src/main.rs"
+
+[dependencies]
+lance = { version = "4", default-features = false }
+lance-core = "4"
+lance-file = "4"
+lance-io = "4"
+lance-index = "4"
+lance-table = "4"
+lance-encoding = "4"
+
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+tokio = { version = "1", features = ["full"] }
+arrow = { version = "57", features = ["prettyprint", "json"] }
+futures = "0.3"
+serde = { version = "1", features = ["derive"] }
+serde_json = "1"
